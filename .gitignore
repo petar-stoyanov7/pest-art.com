@@ -5,7 +5,7 @@
 
 # Node artifact files
 node_modules/
-src/
+dist/
 package-lock.json
 
 # WP Core files
@@ -14,7 +14,6 @@ app/
 
 # Wordpress content directory
 content/uploads/
-content/plugins/
 
 
 # Compiled Java class files
@@ -56,4 +55,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
