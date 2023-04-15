@@ -3,7 +3,7 @@
 	"settings": {
 		"browserSync": {
 			"host": "localhost",
-			"proxy": "http://site.url",
+			"proxy": "https://pest-art.loc",
 			"port": 3000
 		}
 	}

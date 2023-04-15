@@ -21,6 +21,11 @@
 
 <body <?php body_class(); ?>>
 
-<header class="pest-header" role="banner">
-    <?php //TODO: Add header navigation ?>
+<header class="pa-header">
+    <div class="pa-header__desktop">
+        <h1>desktop</h1>
+    </div>
+    <div class="pa-header__mobile">
+        <h1>mobile</h1>
+    </div>
 </header>
