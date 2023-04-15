@@ -1,10 +1,6 @@
-window.onload = () => {
-	if (window.screen.width < 1024) {
-		init();
-	}
-}
 
-const init = () => {
+
+export default function mobileInit() {
 	const mobileMenu = document.getElementById('menu-mobile-navigation');
 	const subMenu = mobileMenu.querySelector('.sub-menu')
 	const pageOverlay = document.getElementById('pa-page-overlay');
