@@ -16,16 +16,34 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 <header class="pa-header">
+    <div class="pa-header__overlay" id="pa-page-overlay"></div>
     <div class="pa-header__desktop">
         <h1>desktop</h1>
     </div>
     <div class="pa-header__mobile">
-        <h1>mobile</h1>
+        <?php pest_mobile_nav(); ?>
+        <div class="pa-header__mobile-home">
+            <a href="<?php echo get_home_url(); ?>" class="pa-header__mobile-home-link"></a>
+        </div>
+    </div>
+    <div class="pa-header__search">
+        <form class="search-form" role="search" method="get" id="searchform" action="/">
+            <input
+                type="text"
+                class="search-form__input"
+                value=""
+                name="s"
+                id="s"
+                aria-label="Search"
+                placeholder="Търси..."
+            >
+            <button class="search-form__submit" type="submit"></button>
+        </form>
     </div>
 </header>

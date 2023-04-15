@@ -21,7 +21,7 @@ if (!function_exists('pest_desktop_nav')) {
             [
                 'container'         => false,
                 'menu-class'        => 'pest-desktop-menu',
-                'items_wrap'        => '<ul id="%1$s" class="%2$ds">%3$s</ul>',
+                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'theme_location'    => 'desktop-nav',
                 'depth'             => 3
             ]
@@ -35,8 +35,7 @@ if (!function_exists('pest_mobile_nav')) {
         wp_nav_menu(
             [
                 'container'         => false,
-                'menu-class'        => 'pest-mobile-menu',
-                'items_wrap'        => '<ul id="%1$s" class="%2$ds">%3$s</ul>',
+                'items_wrap'        => '<ul id="%1$s" class="pa-header__mobile-navigation">%3$s</ul>',
                 'theme_location'    => 'mobile-nav',
                 'depth'             => 3
             ]
@@ -51,7 +50,7 @@ if (!function_exists('pest_footer_nav')) {
             [
                 'container'         => false,
                 'menu-class'        => 'pest-footer-menu',
-                'items_wrap'        => '<ul id="%1$s" class="%2$ds">%3$s</ul>',
+                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'theme_location'    => 'footer-nav',
                 'depth'             => 3
             ]

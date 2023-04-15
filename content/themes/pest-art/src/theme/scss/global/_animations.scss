@@ -56,25 +56,25 @@
 }
 
 @keyframes hide-search {
-	0% {right: 10px}
+	0% {right: 2.5%}
 	33% {right: 0}
-	100% {right: -500px}
+	100% {right: -100vw}
 }
 @keyframes show-search {
-	0% {right: -500px}
+	0% {right: -100vw}
 	66% {right: 0}
-	100% {right: 10px}
+	100% {right: 2.5%}
 }
 
 @keyframes show-menu {
-	0% {left: -100%}
+	0% {left: -120%}
 	//50% {left: -100px}
-	100% {left: 10px}
+	100% {left: 5%}
 }
 @keyframes hide-menu {
-	0% {left: 10px}
+	0% {left: 5%}
 	//50% {left: -100px}
-	100% {left: -100%}
+	100% {left: -120%}
 }
 
 @keyframes show-navigation {
