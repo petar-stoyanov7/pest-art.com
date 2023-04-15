@@ -12,31 +12,6 @@
       "defaultGradients": false,
       "palette": [
         {
-          "slug": "primary",
-          "color": "#1779ba",
-          "name": "Primary"
-        },
-        {
-          "slug": "secondary",
-          "color": "#767676",
-          "name": "Secondary"
-        },
-        {
-          "slug": "success",
-          "color": "#3adb76",
-          "name": "Success"
-        },
-        {
-          "slug": "warning",
-          "color": "#ffae00",
-          "name": "Warning"
-        },
-        {
-          "slug": "alert",
-          "color": "#cc4b37",
-          "name": "Alert"
-        },
-        {
           "slug": "black",
           "color": "#000000",
           "name": "Black"
@@ -45,54 +20,164 @@
           "slug": "white",
           "color": "#ffffff",
           "name": "White"
+        },
+        {
+          "slug": "light-blue",
+          "color": "#e5f4ff",
+          "name": "Light Blue"
+        },
+        {
+          "slug": "blue",
+          "color": "#b1baff",
+          "name": "Blue"
+        },
+        {
+          "slug": "dark-gray",
+          "color": "#555555",
+          "name": "Dark Gray"
+        },
+        {
+          "slug": "warning",
+          "color": "#E7B646",
+          "name": "Warning"
+        },
+        {
+          "slug": "alert",
+          "color": "#EC0606",
+          "name": "Alert"
         }
       ]
     },
     "typography": {
+      "dropCap": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "extra-light",
+              "fontStyle": "normal",
+              "fontWeight": "200",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-ExtraLight.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-Regular.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "medium",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-Medium.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "semi-bold",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-SemiBold.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "bold",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-Bold.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Commissioner",
+              "fontStretch": "extra-bold",
+              "fontStyle": "normal",
+              "fontWeight": "800",
+              "src": [
+                "file:./dist/fonts/comissioner/Commissioner-ExtraBold.woff2"
+              ]
+            }
+          ],
+          "fontFamily": "\"Comissioner\", sans-serif",
+          "name": "Comissioner",
+          "slug": "comissioner"
+        }
+      ],
       "fontSizes": [
         {
+          "fluid": {
+            "min": "48px",
+            "max": "60px"
+          },
           "slug": "headingone",
-          "size": "48px",
-          "name": "~H1"
+          "size": "60px",
+          "name": "headingone"
         },
         {
+          "fluid": {
+            "min": "40px",
+            "max": "50px"
+          },
           "slug": "headingtwo",
-          "size": "40px",
-          "name": "~H2"
+          "size": "50px",
+          "name": "headingtwo"
         },
         {
+          "fluid": {
+            "min": "36px",
+            "max": "44px"
+          },
           "slug": "headingthree",
-          "size": "31px",
-          "name": "~H3"
+          "size": "44px",
+          "name": "headingthree"
         },
         {
+          "fluid": {
+            "min": "24px",
+            "max": "30px"
+          },
           "slug": "headingfour",
-          "size": "25px",
-          "name": "~H4"
+          "size": "30px",
+          "name": "headingfour"
         },
         {
+          "fluid": {
+            "min": "18px",
+            "max": "22px"
+          },
           "slug": "headingfive",
-          "size": "20px",
-          "name": "~H5"
+          "size": "22px",
+          "name": "headingfive"
         },
         {
+          "fluid": {
+            "min": "14px",
+            "max": "16px"
+          },
           "slug": "headingsix",
           "size": "16px",
-          "name": "~H6"
+          "name": "headingsix"
+        },
+        {
+          "fluid": {
+            "min": "16px",
+            "max": "20px"
+          },
+          "size": "20px",
+          "slug": "paragraph"
         }
       ]
-    },
-    "settings": {
-      "spacing": {
-        "margin": false,
-        "padding": false,
-        "blockGap": true
-      }
-    },
-    "styles": {
-      "spacing": {
-        "blockGap": "30px"
-      }
     },
     "gutenberg": {
       "blocks": {
@@ -102,6 +187,59 @@
         ],
         "dynamic_blocks": {}
       }
+    }
+  },
+  "styles": {
+    "blocks": {},
+    "color": {
+      "background": "var(--wp--preset--color--white)",
+      "text": "var(--wp--preset--color--black)"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingone)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingtwo)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingthree)"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingfour)"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingfive)"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--headingsix)"
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontWeight": "700",
+          "lineHeight": "1.4"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--comissioner)",
+      "fontSize": "var(--wp--preset--font-size--paragraph)",
+      "lineHeight": "1.4"
+    },
+    "spacing": {
+      "blockGap": "clamp(40px, 2.604vw, 50px)"
     }
   }
 }
