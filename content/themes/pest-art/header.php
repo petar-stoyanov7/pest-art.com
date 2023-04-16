@@ -24,7 +24,7 @@
 <header class="pa-header">
     <div class="pa-header__overlay" id="pa-page-overlay"></div>
     <div class="pa-header__desktop">
-        <h1>desktop</h1>
+        <?php pest_desktop_nav(); ?>
     </div>
     <div class="pa-header__mobile">
         <?php pest_mobile_nav(); ?>

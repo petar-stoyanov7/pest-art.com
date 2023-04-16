@@ -21,7 +21,7 @@ if (!function_exists('pest_desktop_nav')) {
             [
                 'container'         => false,
                 'menu-class'        => 'pest-desktop-menu',
-                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'items_wrap'        => '<ul id="%1$s" class="pa-header__desktop-navigation">%3$s</ul>',
                 'theme_location'    => 'desktop-nav',
                 'depth'             => 3
             ]

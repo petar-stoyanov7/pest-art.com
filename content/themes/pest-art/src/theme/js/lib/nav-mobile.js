@@ -1,4 +1,7 @@
-
+import {
+	hideElement,
+	showElement
+} from './navigation';
 
 export default function mobileInit() {
 	const mobileMenu = document.getElementById('menu-mobile-navigation');
@@ -6,25 +9,17 @@ export default function mobileInit() {
 	const pageOverlay = document.getElementById('pa-page-overlay');
 	const searchForm = document.querySelector('.pa-header__search');
 
-	const hideElement = (element) => {
-		element.classList.add('is-hidden');
-		element.classList.remove('is-visible');
-	}
-	const showElement = (element) => {
-		element.classList.remove('is-hidden');
-		element.classList.add('is-visible');
-	}
 
-	const toggleElement = (element) => {
+	const toggleElement = (element, overlay) => {
 		const other = element === searchForm ? subMenu : searchForm;
 
 		if (element.classList.contains('is-visible')) {
 			hideElement(element);
-			pageOverlay.classList.remove('is-visible');
+			overlay.classList.remove('is-visible');
 
 		} else {
 			showElement(element);
-			pageOverlay.classList.add('is-visible');
+			overlay.classList.add('is-visible');
 			if (other.classList.contains('is-visible')) {
 				hideElement(other);
 			}
