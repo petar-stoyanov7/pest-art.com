@@ -5,6 +5,10 @@
  * @package Pesticide
  * @since Pesticide 0.0.1
  */
+
+if (empty($_COOKIE['pa-cookie-consent'])) {
+	get_template_part( 'template-parts/cookies-popup' );
+}
 ?>
 
 <footer class="pa-footer">
