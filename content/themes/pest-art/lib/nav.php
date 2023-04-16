@@ -50,7 +50,7 @@ if (!function_exists('pest_footer_nav')) {
             [
                 'container'         => false,
                 'menu-class'        => 'pest-footer-menu',
-                'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'items_wrap'        => '<ul id="%1$s" class="pa-footer__menu-navigation">%3$s</ul>',
                 'theme_location'    => 'footer-nav',
                 'depth'             => 3
             ]

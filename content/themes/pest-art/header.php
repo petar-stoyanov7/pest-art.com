@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the header
  *
@@ -8,6 +7,8 @@
  * @package Pesticide
  * @since Pesticide 0.0.1
  */
+
+
 
 ?>
 <!doctype html>
