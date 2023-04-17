@@ -11,6 +11,12 @@ define('THEME_JSON', json_decode(file_get_contents(__DIR__ . "/theme.json"), tru
 /** Navigation */
 require_once 'lib/nav.php';
 
+/** Pagination */
+require_once 'lib/pagination.php';
+
+/** Images */
+require_once 'lib/images.php';
+
 /** Scripts */
 require_once 'lib/enqueue-scripts.php';
 

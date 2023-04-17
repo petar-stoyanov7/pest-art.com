@@ -35,7 +35,7 @@ if (empty($_COOKIE['pa-cookie-consent'])) {
             </p>
         </div>
         <div class="pa-footer__menu">
-		    <?php pest_footer_nav() ?>
+		    <?php paFooterMenu() ?>
         </div>
     </div>
 

@@ -4,8 +4,8 @@
 	background-size: cover;
 	border-radius: 50%;
 	box-sizing: border-box;
-	background-color: var(--wp--preset--color--light-blue);
-	box-shadow: 0 0 2px 3px var(--wp--preset--color--light-blue);
+	background-color: var(--wp--preset--color--light-green);
+	box-shadow: 0 0 2px 3px var(--wp--preset--color--light-green);
 
 	& > a {
 		display: block;
@@ -15,10 +15,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-}
-
-body {
-	background-color: var(--wp--preset--color--blue) !important; //TODO remove;
 }
 
 .pa-header {
@@ -88,6 +84,9 @@ body {
 
 	&__desktop {
 		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
 		flex-direction: row;
 		flex-wrap: nowrap;
 

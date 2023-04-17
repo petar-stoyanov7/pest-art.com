@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<main class="pest-content">
+<main class="pa-content">
     <div class="pest-entry">
         <?php
         if (have_posts()) {
@@ -28,19 +28,8 @@ get_header();
         ?>
     </div>
 
-    <div class="pest-pagination">
-        <?php if (function_exists('pest_pagination')) : ?>
-            <?php pest_pagination(); ?>
-        <?php elseif(is_paged()) : ?>
-            <nav class="pest-nav">
-				<div class="pest-nav__previous">
-                    <?php next_posts_link(__('&larr; Older posts', 'hlebarovpress')); ?>
-                </div>
-				<div class="pest-nav__next">
-                    <?php previous_posts_link(__('Newer posts &rarr;', 'hlebarovpress')); ?>
-                </div>
-            </nav>
-        <?php endif; ?>
+    <div class="pa-pagination">
+        <?php defaultPagination(); ?>
     </div>
 </main>
 

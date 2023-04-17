@@ -1,8 +1,14 @@
 <?php
+/**
+ * Register Custom Post Type(s)
+ *
+ * @package Pest-art.com
+ * @since 0.0.1
+ */
 // Register Custom Post Type
-function caricature_cpt() {
+function caricatureCpt() {
 
-    $labels = array(
+    $labels = [
         'name'                  => _x( 'Caricatures', 'Post Type General Name', 'pest-art' ),
         'singular_name'         => _x( 'Caricature', 'Post Type Singular Name', 'pest-art' ),
         'menu_name'             => __( 'Caricatures', 'pest-art' ),
@@ -30,19 +36,19 @@ function caricature_cpt() {
         'items_list'            => __( 'Items list', 'pest-art' ),
         'items_list_navigation' => __( 'Items list navigation', 'pest-art' ),
         'filter_items_list'     => __( 'Filter items list', 'pest-art' ),
-    );
-    $rewrite = array(
+    ];
+    $rewrite = [
         'slug'                  => 'caricatures',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
-    );
-    $args = array(
+    ];
+    $args = [
         'label'                 => __( 'Caricature', 'pest-art' ),
         'description'           => __( 'Caricature Description', 'pest-art' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'thumbnail' ),
-        'taxonomies'            => array( 'gallery', 'post_tag' ),
+        'supports'              => [ 'title', 'editor', 'thumbnail' ],
+        'taxonomies'            => [ 'gallery', 'post_tag' ],
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -57,8 +63,8 @@ function caricature_cpt() {
         'rewrite'               => $rewrite,
         'capability_type'       => 'page',
         'show_in_rest'          => true,
-    );
+    ];
     register_post_type( 'caricature', $args );
 
 }
-add_action( 'init', 'caricature_cpt', 0 );
+add_action( 'init', 'caricatureCpt', 0 );

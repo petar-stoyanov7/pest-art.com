@@ -6,7 +6,7 @@
  * @since Pesticide 0.0.1
  */
 
-function pest_scripts_styles()
+function paScriptsStyles()
 {
     $css_data = include get_stylesheet_directory() . '/dist/css/style.asset.php';
     $js_data = include get_stylesheet_directory() . '/dist/js/app.asset.php';
@@ -42,9 +42,9 @@ function pest_scripts_styles()
         true
     );
 }
-add_action('wp_enqueue_scripts', 'pest_scripts_styles');
+add_action('wp_enqueue_scripts', 'paScriptsStyles');
 
-function pest_admin_scripts()
+function paAdminScripts()
 {
     $js_assets = include get_stylesheet_directory() . '/dist/js/admin.asset.php';
 	wp_enqueue_script(
@@ -55,4 +55,4 @@ function pest_admin_scripts()
         true
     );
 }
-add_action('admin_enqueue_scripts', 'pest_admin_scripts');
+add_action('admin_enqueue_scripts', 'paAdminScripts');

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Register Taxonomy
+ *
+ * @package Pest-art.com
+ * @since 0.0.1
+ */
 // register media tax
 add_action('init', function() {
     register_taxonomy(
@@ -10,9 +15,9 @@ add_action('init', function() {
 
 
 // Register Custom Taxonomy
-function gallery_tax() {
+function galleryTax() {
 
-    $labels = array(
+    $labels = [
         'name'                       => _x( 'Galleries', 'Taxonomy General Name', 'pest-art' ),
         'singular_name'              => _x( 'Gallery', 'Taxonomy Singular Name', 'pest-art' ),
         'menu_name'                  => __( 'Gallery', 'pest-art' ),
@@ -33,13 +38,13 @@ function gallery_tax() {
         'no_terms'                   => __( 'No items', 'pest-art' ),
         'items_list'                 => __( 'Items list', 'pest-art' ),
         'items_list_navigation'      => __( 'Items list navigation', 'pest-art' ),
-    );
-    $rewrite = array(
+    ];
+    $rewrite = [
         'slug'                       => 'gallery',
         'with_front'                 => true,
         'hierarchical'               => false,
-    );
-    $args = array(
+    ];
+    $args = [
         'labels'                     => $labels,
         'hierarchical'               => true,
         'public'                     => true,
@@ -49,9 +54,9 @@ function gallery_tax() {
         'show_tagcloud'              => true,
         'rewrite'                    => $rewrite,
         'show_in_rest'               => true,
-    );
-    register_taxonomy( 'gallery', array( 'caricature' ), $args );
+    ];
+    register_taxonomy( 'gallery', [ 'caricature' ], $args );
 
 }
-add_action( 'init', 'gallery_tax', 0 );
+add_action( 'init', 'galleryTax', 0 );
 ?>

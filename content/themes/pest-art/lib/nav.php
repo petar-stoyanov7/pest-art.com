@@ -14,8 +14,8 @@ register_nav_menus(
     ]
 );
 
-if (!function_exists('pest_desktop_nav')) {
-    function pest_desktop_nav()
+if (!function_exists( 'paDesktopMenu' )) {
+    function paDesktopMenu()
     {
         wp_nav_menu(
             [
@@ -29,8 +29,8 @@ if (!function_exists('pest_desktop_nav')) {
     }
 }
 
-if (!function_exists('pest_mobile_nav')) {
-    function pest_mobile_nav()
+if (!function_exists( 'paMobileMenu' )) {
+    function paMobileMenu()
     {
         wp_nav_menu(
             [
@@ -43,8 +43,8 @@ if (!function_exists('pest_mobile_nav')) {
     }
 }
 
-if (!function_exists('pest_footer_nav')) {
-    function pest_footer_nav()
+if (!function_exists( 'paFooterMenu' )) {
+    function paFooterMenu()
     {
         wp_nav_menu(
             [

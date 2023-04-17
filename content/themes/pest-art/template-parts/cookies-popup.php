@@ -5,8 +5,6 @@
  * @package Pesticide
  * @since Pesticide 0.0.1
  */
-
-//
 ?>
 
 <div class="pa-cookies" id="cookies-popup">
@@ -21,6 +19,7 @@
     </div>
 	<div class="pa-cookies__text">
 		<div id="text-bg" class="pa-cookies__text-entry is-visible">
+            <?php //todo: replace with dynamically added content; ?>
 			<p>
 				Внимание!
 			</p>

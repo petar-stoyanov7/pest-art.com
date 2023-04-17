@@ -10,10 +10,10 @@ export const showElement = (element) => {
 	element.classList.add('is-visible');
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
 	if (window.screen.width < 1024) {
 		mobileInit();
 	} else {
 		desktopInit();
 	}
-}
+});

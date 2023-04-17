@@ -25,10 +25,10 @@
 <header class="pa-header">
     <div class="pa-header__overlay" id="pa-page-overlay"></div>
     <div class="pa-header__desktop">
-        <?php pest_desktop_nav(); ?>
+        <?php paDesktopMenu(); ?>
     </div>
     <div class="pa-header__mobile">
-        <?php pest_mobile_nav(); ?>
+        <?php paMobileMenu(); ?>
         <div class="pa-header__mobile-home">
             <a href="<?php echo get_home_url(); ?>" class="pa-header__mobile-home-link"></a>
         </div>

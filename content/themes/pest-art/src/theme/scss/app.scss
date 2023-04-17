@@ -4,13 +4,15 @@
 /* Theme proprietary files */
 
 /* Global */
+@import 'global/main';
 @import 'global/inlined-images';
 @import 'global/animations';
 @import 'global/site-header';
 @import 'global/site-footer';
 
 /* Modules */
-@import 'modules/map';
+@import 'modules/archive';
+@import 'modules/single';
 
 /* Components */
 @import 'components/buttons';

@@ -4,7 +4,7 @@
     "appearanceTools": true,
     "devLabel": false,
     "layout": {
-      "contentSize": "1200px",
+      "contentSize": "clamp(200px, 90vw, 1440px)",
       "wideSize": "1600px"
     },
     "color": {
@@ -30,6 +30,16 @@
           "slug": "blue",
           "color": "#b1baff",
           "name": "Blue"
+        },
+        {
+          "slug": "light-green",
+          "color": "#d5f7de",
+          "name": "Light Green"
+        },
+        {
+          "slug": "green",
+          "color": "#268d41",
+          "name": "Green"
         },
         {
           "slug": "dark-gray",
