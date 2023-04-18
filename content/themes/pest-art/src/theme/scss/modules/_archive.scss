@@ -94,6 +94,21 @@
 			}
 		}
 	}
+
+	&.pa-gallery {
+		.pa-caricature__title {
+			top: 15px;
+			background-color: var(--wp--preset--color--light-blue);
+			box-shadow:  0 0 3px 3px var(--wp--preset--color--light-blue);
+		}
+		.pa-caricature__excerpt {
+			bottom: 25px;
+
+			p {
+				margin: 0;
+			}
+		}
+	}
 }
 
 .pa-post {
