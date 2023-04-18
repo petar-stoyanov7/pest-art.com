@@ -30,8 +30,7 @@ if (preg_match('/\/page\/\d/', $_SERVER['REQUEST_URI'])) {
 $mainQuery = new WP_Query([
     'post_type' => ['post', 'caricature'],
     'post_status' => 'published',
-//    'posts_per_page' => 12,
-    'posts_per_page' => 2,
+    'posts_per_page' => 12,
     'orderby' => 'date',
     'order' => 'DESC',
     'paged' => $currentPage
@@ -39,14 +38,12 @@ $mainQuery = new WP_Query([
 ?>
 
 <main class="pa-content">
-    <?php if (1 === $currentPage) : ?>
+    <?php if (1 === $currentPage && $featuredQuery->have_posts()) : ?>
 	<div class="pa-content__featured">
         <?php
-        if ($featuredQuery->have_posts()) {
-            while($featuredQuery->have_posts()) {
-                $featuredQuery->the_post();
-                get_template_part('template-parts/content-featured');
-            }
+        while($featuredQuery->have_posts()) {
+            $featuredQuery->the_post();
+            get_template_part('template-parts/content-featured');
         }
         wp_reset_postdata();
         ?>
