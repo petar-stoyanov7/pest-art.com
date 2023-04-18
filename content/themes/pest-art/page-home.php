@@ -2,10 +2,6 @@
 /**
  * The Home Page  template file
  *
- * That's the very basic file for any WP theme.
- *
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  *
  * @package Pest-art
  * @since Pest-art 0.0.1
@@ -54,7 +50,7 @@ $mainQuery = new WP_Query([
         if ($mainQuery->have_posts()) {
             while($mainQuery->have_posts()) {
                 $mainQuery->the_post();
-                get_template_part('template-parts/content', 'home');
+                get_template_part('template-parts/archive', 'home');
             }
         }
         ?>

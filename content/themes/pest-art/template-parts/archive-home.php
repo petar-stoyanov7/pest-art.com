@@ -7,8 +7,8 @@
  */
 
 if ('post' === get_post_type()) {
-	get_template_part('template-parts/content', 'post');
+	get_template_part('template-parts/archive', 'post');
 } else {
-	get_template_part('template-parts/content', 'caricature');
+	get_template_part('template-parts/archive', 'caricature');
 }
 
