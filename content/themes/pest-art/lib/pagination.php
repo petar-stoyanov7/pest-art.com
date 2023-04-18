@@ -10,10 +10,10 @@
  */
 function archivePagination($wp_query = false, $page = false)
 {
+
 	if (!$wp_query) {
 		global $wp_query;
 	}
-	$result = '';
 	$big = 999999999999;
 	$queriedObject = get_queried_object();
 	$queryString = '';
@@ -33,6 +33,8 @@ function archivePagination($wp_query = false, $page = false)
 		$link = get_term_link($queriedObject);
 	} elseif (is_a($queriedObject, 'WP_Post_Type')) {
 		$link = get_post_type_archive_link($queriedObject->name);
+	} elseif (is_home()) {
+		$link = get_post_type_archive_link('post');
 	} else {
 		$link = get_home_url();
 	}

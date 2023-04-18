@@ -28,6 +28,13 @@
 	@media (min-width: 1440px) {
 		width: calc(50% - 10px);
 	}
+
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+	}
 }
 
 
@@ -51,6 +58,7 @@
 
 	&__title {
 		@include archive-content;
+		color: var(--wp--preset--color--black);
 		top: 15px;
 		left: 20px;
 		background-color: var(--wp--preset--color--white);
@@ -63,6 +71,7 @@
 
 	&__excerpt {
 		@include archive-content;
+		color: var(--wp--preset--color--black);
 		position: absolute;
 		bottom: 15px;
 		right: 20px;
@@ -88,11 +97,19 @@
 }
 
 .pa-post {
-	background-color: #f3f3f3;
+	background-color: #eeeeee;
 	padding: 20px;
+
+	&__title, &__excerpt {
+		color: var(--wp--preset--color--black);
+	}
 
 	&__title {
 		margin: 0 0 15px;
+	}
+
+	&:hover {
+		background-color: #f6f6f6;
 	}
 }
 
