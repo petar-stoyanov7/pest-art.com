@@ -26,12 +26,12 @@ if (!empty($args) && !empty($args['is-random']) && $args['is-random']) {
 }
 ?>
 
-<ul class="ps-controls">
+<ul id="nav-controls" class="ps-controls">
         <li class="<?php echo $previousClass; ?>">
-            <a class="" href="<?php echo $previousLink; ?>"></a>
+            <a id="previous-item" href="<?php echo $previousLink; ?>"></a>
         </li>
         <li class="<?php echo $nextClass; ?>">
-            <a class="" href="<?php echo $nextLink; ?>"></a>
+            <a id="next-item" href="<?php echo $nextLink; ?>"></a>
         </li>
 </ul>
 <article class="ps-caricature">
