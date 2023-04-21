@@ -18,7 +18,6 @@ if (is_a($queriedObject, 'WP_Term')) {
 } elseif (is_a($queriedObject, 'WP_Post_Type')) {
 } elseif (is_home()) {
     $title = $queriedObject->post_title;
-} else {
 }
 
 get_header();
