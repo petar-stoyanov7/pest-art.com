@@ -15,11 +15,11 @@ export default function mobileInit() {
 
 		if (element.classList.contains('is-visible')) {
 			hideElement(element);
-			overlay.classList.remove('is-visible');
+			pageOverlay.classList.remove('is-visible');
 
 		} else {
 			showElement(element);
-			overlay.classList.add('is-visible');
+			pageOverlay.classList.add('is-visible');
 			if (other.classList.contains('is-visible')) {
 				hideElement(other);
 			}
