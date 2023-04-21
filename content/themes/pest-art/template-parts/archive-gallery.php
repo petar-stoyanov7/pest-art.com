@@ -11,24 +11,40 @@ if (empty($args)) {
 }
 $galleryTerm = $args['term'];
 $link = get_term_link($galleryTerm);
-$galleryImage = get_field('pa-category-image', "{$galleryTerm->taxonomy}_{$galleryTerm->term_id}");
-$srcSet = "{$galleryImage['sizes']['archive-small']} 400w, " .
-          "{$galleryImage['sizes']['archive-medium']} 600w, " .
-          "{$galleryImage['sizes']['archive-large']} 800w";
-$sizes = "(max-width: 600px) 400px, (max-width: 800px) 600px, (max-width: 2560px) 800px";
+$selector = "{$galleryTerm->taxonomy}_{$galleryTerm->term_id}";
+$galleryImage = get_field('pa-category-image', $selector);
+$url = get_template_directory_uri() . '/dist/images/cover-default.jpg';
+$srcSet = $sizes = false;
+if (!empty($galleryImage)) {
+	$srcSet = "{$galleryImage['sizes']['archive-small']} 400w, " .
+	          "{$galleryImage['sizes']['archive-medium']} 600w, " .
+	          "{$galleryImage['sizes']['archive-large']} 800w";
+	$sizes  = "(max-width: 600px) 400px, (max-width: 800px) 600px, (max-width: 2560px) 800px";
+    $url = $galleryImage['url'];
+}
 $excerpt = term_description($galleryTerm);
+$order = get_field('pa-order', $selector);
 ?>
 
-<article class="pa-archive pa-caricature pa-gallery">
+<article
+        class="pa-archive pa-caricature pa-gallery"
+        <?php if (!empty($order)) : ?>
+            style="order: <?php echo $order; ?>"
+        <?php endif; ?>
+>
 	<a href="<?php echo $link; ?>" class="pa-archive__link" target="_blank">
 		<h3 class="pa-caricature__title">
 			<?php echo $galleryTerm->name; ?>
 		</h3>
 		<figure class="pa-caricature__image">
 			<img
-				srcset="<?php echo $srcSet; ?>"
-				sizes="<?php echo $sizes; ?>"
-				src="<?php echo $galleryImage['url']; ?>"
+                <?php if (!empty($srcSet)) : ?>
+                    srcset="<?php echo $srcSet; ?>"
+                <?php endif; ?>
+                <?php if (!empty($sizes)) : ?>
+                    sizes="<?php echo $sizes; ?>"
+                <?php endif; ?>
+				src="<?php echo $url; ?>"
 				alt="<?php echo $galleryTerm->name; ?>"
 			>
 		</figure>

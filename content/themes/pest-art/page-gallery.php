@@ -22,6 +22,10 @@ $terms = get_terms([
 	<div class="pa-content__container">
 		<?php
 		foreach ($terms as $term) {
+//            $isHidden = get_field('pa-is-hidden', "{$term->taxonomy}_{$term->term_id}");
+//            if (!empty($isHidden) && (bool)$isHidden) {
+//                continue;
+//            }
 			get_template_part('template-parts/archive', 'gallery', ['term' => $term]);
 		}
 		?>

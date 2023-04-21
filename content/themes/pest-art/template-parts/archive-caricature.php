@@ -7,11 +7,16 @@
  */
 
 $postId = get_the_ID();
+$url = get_template_directory_uri() . '/dist/images/cover-default.jpg';
 $src = get_the_post_thumbnail_url($postId, 'archive-large');
-$srcSet = get_the_post_thumbnail_url($postId, 'archive-small') . " 400w, " .
-          get_the_post_thumbnail_url($postId, 'archive-medium') . " 600w, " .
-          get_the_post_thumbnail_url($postId, 'archive-large') . " 800w";
-$sizes = "(max-width: 600px) 400px, (max-width: 800px) 600px, (max-width: 2560px) 800px";
+$srcSet = $sizes = false;
+if (!empty($src)) {
+	$srcSet = get_the_post_thumbnail_url($postId, 'archive-small') . " 400w, " .
+	          get_the_post_thumbnail_url($postId, 'archive-medium') . " 600w, " .
+	          get_the_post_thumbnail_url($postId, 'archive-large') . " 800w";
+	$sizes = "(max-width: 600px) 400px, (max-width: 800px) 600px, (max-width: 2560px) 800px";
+    $url = $src;
+}
 $title = get_the_title();
 $excerpt = get_the_excerpt();
 $link = get_the_permalink();
@@ -24,10 +29,14 @@ $link = get_the_permalink();
         </h3>
         <figure class="pa-caricature__image">
             <img
+                <?php if (!empty($srcSet)) : ?>
                     srcset="<?php echo $srcSet; ?>"
+                <?php endif; ?>
+                <?php if (!empty($sizes)) : ?>
                     sizes="<?php echo $sizes; ?>"
-                    src="<?php echo $src; ?>"
-                    alt="<?php echo $title; ?>"
+                <?php endif; ?>
+                src="<?php echo $url; ?>"
+                alt="<?php echo $title; ?>"
             >
         </figure>
         <?php if (!empty($excerpt)) : ?>
