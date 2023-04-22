@@ -7,7 +7,12 @@
  */
 ?>
 
+<div class="pa-cookies__overlay" id="cookies-overlay"></div>
+
 <div class="pa-cookies" id="cookies-popup">
+    <button class="pa-cookies__close disagree">
+        <span></span>
+    </button>
     <div class="pa-cookies__cover">
         <figure class="pa-cookies__cover-image">
             <img src="" alt="Cookie Image">
