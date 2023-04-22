@@ -104,8 +104,8 @@
 /* Cookie popup */
 .pa-cookies {
 	position: fixed;
-	z-index: 30;
-	top: 10vh;
+	z-index: 70;
+	top: 40px;
 	left: 5%;
 	width: 90%;
 	background-color: var(--wp--preset--color--white);
@@ -148,6 +148,7 @@
 			width: 40%;
 			padding-top: 30%;
 			height: auto;
+			margin-bottom: 0;
 			background-image: url('../images/cookie.png');
 			background-size: cover;
 			background-repeat: no-repeat;
