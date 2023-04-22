@@ -122,34 +122,77 @@
           "fontFamily": "\"Comissioner\", sans-serif",
           "name": "Comissioner",
           "slug": "comissioner"
+        },
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Unbounded",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./dist/fonts/unbounded/Unbounded-Regular.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Unbounded",
+              "fontStretch": "bold",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": [
+                "file:./dist/fonts/unbounded/Unbounded-Bold.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Unbounded",
+              "fontStretch": "extra-bold",
+              "fontStyle": "normal",
+              "fontWeight": "800",
+              "src": [
+                "file:./dist/fonts/unbounded/Unbounded-ExtraBold.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Unbounded",
+              "fontStretch": "black",
+              "fontStyle": "normal",
+              "fontWeight": "900",
+              "src": [
+                "file:./dist/fonts/unbounded/Unbounded-Black.woff2"
+              ]
+            }
+          ],
+          "fontFamily": "\"Unbounded\", cursive",
+          "name": "Unbounded",
+          "slug": "unbounded"
         }
       ],
       "fontSizes": [
         {
           "fluid": {
-            "min": "48px",
-            "max": "60px"
-          },
-          "slug": "headingone",
-          "size": "60px",
-          "name": "headingone"
-        },
-        {
-          "fluid": {
             "min": "40px",
             "max": "50px"
           },
-          "slug": "headingtwo",
-          "size": "50px",
-          "name": "headingtwo"
+          "slug": "headingone",
+          "size": "55px",
+          "name": "headingone"
         },
         {
           "fluid": {
             "min": "36px",
             "max": "44px"
           },
-          "slug": "headingthree",
+          "slug": "headingtwo",
           "size": "44px",
+          "name": "headingtwo"
+        },
+        {
+          "fluid": {
+            "min": "30px",
+            "max": "38px"
+          },
+          "slug": "headingthree",
+          "size": "38px",
           "name": "headingthree"
         },
         {
@@ -238,6 +281,7 @@
       },
       "heading": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--unbounded)",
           "fontWeight": "700",
           "lineHeight": "1.4"
         }
