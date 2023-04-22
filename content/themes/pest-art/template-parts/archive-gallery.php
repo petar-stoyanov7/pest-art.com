@@ -32,10 +32,10 @@ $order = get_field('pa-order', $selector);
             style="order: <?php echo $order; ?>"
         <?php endif; ?>
 >
+    <h3 class="pa-caricature__title">
+		<?php echo $galleryTerm->name; ?>
+    </h3>
 	<a href="<?php echo $link; ?>" class="pa-archive__link" target="_blank">
-		<h3 class="pa-caricature__title">
-			<?php echo $galleryTerm->name; ?>
-		</h3>
 		<figure class="pa-caricature__image">
 			<img
                 <?php if (!empty($srcSet)) : ?>
