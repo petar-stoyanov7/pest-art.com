@@ -5,8 +5,13 @@
 
 # Node artifact files
 node_modules/
-dist/
+npm-debug.log
+
+# Src files
+src/
 package-lock.json
+package.json
+
 
 # WP Core files
 app/
@@ -55,3 +60,10 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+#from theme
+*.sass-cache*
+*.swp
+packaged/
+wpcs/
+vendor/
