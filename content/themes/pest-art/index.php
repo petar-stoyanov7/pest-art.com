@@ -16,8 +16,11 @@ $queriedObject = get_queried_object();
 if (is_a($queriedObject, 'WP_Term')) {
     $title = $queriedObject->name;
 } elseif (is_a($queriedObject, 'WP_Post_Type')) {
+    $title = $queriedObject->label;
 } elseif (is_home()) {
     $title = $queriedObject->post_title;
+} elseif (is_search()) {
+    $title = 'Търсене за "' . get_search_query() . '"';
 }
 
 get_header();
@@ -27,9 +30,9 @@ get_header();
 
     <div class="pa-content__container">
         <?php if (!empty($title)) : ?>
-        <h1 class="pa-content__title">
-            <?php echo $title; ?>
-        </h1>
+            <h1 class="pa-content__title">
+                <?php echo $title; ?>
+            </h1>
         <?php endif; ?>
 
         <?php
@@ -42,7 +45,6 @@ get_header();
             get_template_part('template-parts/content', 'none');
         }
         ?>
-
     </div>
 
     <div class="pa-pagination">

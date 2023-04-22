@@ -11,8 +11,10 @@ if ('post' === $postType) {
 	get_template_part('template-parts/archive', 'post');
 } elseif ('caricature' === $postType) {
 	get_template_part('template-parts/archive', 'caricature');
-} elseif (is_page()) {
+} elseif ('page' === $postType && !is_search()) {
 	get_template_part('template-parts/page');
+} elseif ('page' === $postType && is_search()) {
+	get_template_part('template-parts/archive', 'post');
 } else {
 	get_template_part('template-parts/single', 'post');
 }

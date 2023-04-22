@@ -125,6 +125,15 @@
 			}
 		}
 	}
+
+	&.pa-none {
+		.pa-caricature__title {
+			top: 15px;
+		}
+		.pa-caricature__excerpt {
+			bottom: 15px;
+		}
+	}
 }
 
 .pa-post {

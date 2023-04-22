@@ -3,10 +3,9 @@
 	padding-top: 20px;
 
 	&__title {
-		position: absolute;
-		top: 5px;
-		left: 10px;
+		display: inline-block;
 		margin: 0;
+		margin-bottom: 15px;
 		padding: 5px 15px;
 		border-radius: 5px;
 		background-color: var(--wp--preset--color--light-blue);
@@ -29,7 +28,7 @@
 .ps-controls {
 	position: fixed;
 	z-index: 30;
-	top: calc(50% - 65px);
+	top: calc(50vh - 65px);
 	left: 0;
 	right: 0;
 	padding: 0 15px;

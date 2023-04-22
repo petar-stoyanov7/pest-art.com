@@ -12,7 +12,9 @@
 	<div class="pa-post__content">
 		<?php the_content(); ?>s
 	</div>
+    <?php if (!is_search()) : ?>
 	<div class="pa-post__similar">
 		<?php get_template_part('template-parts/single-similar-posts'); ?>
 	</div>
+    <?php endif; ?>
 </article>
