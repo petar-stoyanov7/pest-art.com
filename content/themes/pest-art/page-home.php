@@ -25,11 +25,12 @@ if (preg_match('/\/page\/\d/', $_SERVER['REQUEST_URI'])) {
 
 $mainQuery = new WP_Query([
     'post_type' => ['post', 'caricature'],
-    'post_status' => 'published',
+    'post_status' => 'publish',
     'posts_per_page' => 12,
     'orderby' => 'date',
     'order' => 'DESC',
-    'paged' => $currentPage
+    'paged' => $currentPage,
+    'post__not_in' => get_hidden_caricature_ids()
 ]);
 ?>
 

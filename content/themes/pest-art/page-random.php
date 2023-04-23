@@ -10,6 +10,7 @@ $randomQuery = new WP_Query([
 	'post_type'         => 'caricature',
 	'post_status'       => 'publish',
 	'posts_per_page'    => 1,
+    'post__not_in'      => get_hidden_caricature_ids(),
 	'orderby'           => 'rand',
 ]);
 
