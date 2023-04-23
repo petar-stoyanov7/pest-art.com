@@ -12,14 +12,12 @@ src/
 package-lock.json
 package.json
 
-
 # WP Core files
 app/
 
-
 # Wordpress content directory
 content/uploads/
-
+content/plugins/
 
 # Compiled Java class files
 *.class
