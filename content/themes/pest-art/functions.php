@@ -20,6 +20,12 @@ require_once 'lib/images.php';
 /** Scripts */
 require_once 'lib/enqueue-scripts.php';
 
+/** Helper functions */
+require_once 'lib/helpers.php';
+
+/** Query Overrides */
+require_once 'lib/query.php';
+
 /** Custom Post Types */
 require_once 'lib/add-cpt.php';
 
