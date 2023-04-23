@@ -7,14 +7,12 @@
 node_modules/
 dist/
 package-lock.json
+npm-debug.log
 
-# WP Core files
+# WP files
 app/
-
-
-# Wordpress content directory
 content/uploads/
-
+content/plugins/
 
 # Compiled Java class files
 *.class
@@ -55,3 +53,13 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+# Theme block files
+build
+
+#others
+*.sass-cache*
+*.swp
+packaged/
+wpcs/
+vendor/
