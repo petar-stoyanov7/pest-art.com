@@ -10,11 +10,11 @@ $isRandom = !empty($args) && !empty($args['is-random']) && $args['is-random'];
 $previousClass = "ps-controls__control is-previous";
 $nextClass = "ps-controls__control is-next";
 
-$previous = get_previous_post();
+$previous = get_previous_post(true, '', 'gallery');
 $previousClass .= empty($previous) && !$isRandom ? " is-disabled" : '';
 $previousLink = empty($previous) ? '#' : get_permalink($previous->ID);
 
-$next = get_next_post();
+$next = get_next_post(true, '', 'gallery');
 $nextClass .= empty($next) && !$isRandom ? " is-disabled" : '';
 $nextLink = empty($next) ? '#' : get_permalink($next->ID);
 
