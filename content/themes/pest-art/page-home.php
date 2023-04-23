@@ -30,7 +30,7 @@ $mainQuery = new WP_Query([
     'orderby' => 'date',
     'order' => 'DESC',
     'paged' => $currentPage,
-    'post__not_in' => get_hidden_caricature_ids()
+    'post__not_in' => getHiddenCaricatureIds()
 ]);
 ?>
 

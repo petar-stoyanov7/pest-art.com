@@ -5,7 +5,9 @@
  * @package Pest-art
  * @since Pest-art 0.0.6
  */
-function get_hidden_caricature_ids()
+
+
+function getHiddenCaricatureIds() : array
 {
 	$result = get_transient('pa-hidden-caricature-ids');
 	if (!empty($result) && is_array($result)) {
