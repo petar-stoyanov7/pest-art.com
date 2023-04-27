@@ -2,9 +2,7 @@ import {hideElement, showElement} from './navigation'
 
 const createConsentCookie = () => {
 	let expiry = new Date();
-	console.log(expiry.toString());
 	expiry.setMonth(expiry.getMonth() + 1);
-	console.log(expiry.toString());
 
 	document.cookie = `pa-cookie-consent=y, expires=${expiry.toString()}`;
 }
@@ -18,7 +16,6 @@ const cookiesInit = () => {
 	const buttonAgree = document.getElementById('cookies-agree');
 	const buttonDisagree = document.querySelectorAll('button.disagree');
 	const pageOverlay = document.getElementById('cookies-overlay');
-	console.log(pageOverlay);
 
 
 	showElement(pageOverlay);
@@ -52,7 +49,6 @@ const cookiesInit = () => {
 
 window.onload = () => {
 	if (document.getElementById('cookies-popup')) {
-		console.log('start');
 		cookiesInit();
 	}
 }

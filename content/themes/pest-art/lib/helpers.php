@@ -5,11 +5,20 @@
  * @package Pest-art
  * @since Pest-art 0.0.6
  */
+$transientName = 'pa-hidden-caricature-ids';
+
+function resetHiddenList() : void
+{
+	global $transientName;
+	delete_transient($transientName);
+	getHiddenCaricatureIds();
+}
 
 
 function getHiddenCaricatureIds() : array
 {
-	$result = get_transient('pa-hidden-caricature-ids');
+	global $transientName;
+	$result = get_transient($transientName);
 	if (!empty($result) && is_array($result)) {
 		return $result;
 	}
@@ -54,7 +63,7 @@ function getHiddenCaricatureIds() : array
 		$result[] = $post->ID;
 	}
 
-	set_transient('pa-hidden-caricature-ids', $result, DAY_IN_SECONDS);
+	set_transient($transientName, $result, DAY_IN_SECONDS);
 
 	return $result;
 }
